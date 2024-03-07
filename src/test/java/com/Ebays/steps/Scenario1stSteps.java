@@ -31,7 +31,7 @@ public class Scenario1stSteps extends BaseTest {
 	@Given("^Initialize the browser with chrome$")
 	public void initialize_the_browser_with_chrome() {
 		init();
-		driver.manage().window().maximize();		
+		driver.manage().window().maximize();	// initialize driver	
 	}
 	
 	@Given("^Navigate to \"([^\"]*)\" site$")
@@ -47,7 +47,7 @@ public class Scenario1stSteps extends BaseTest {
 		
 		Select drpFilter=new Select(hp.categories());
 		drpFilter.selectByVisibleText(string);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // implicit wait
 		
 		hp.submit().click();		
 	}
